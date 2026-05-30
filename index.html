@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏋️ Fitness Tracker</h1>
+
+    <div class="card">
+
+        <h3>Select Exercise</h3>
+
+<select id="exercise">
+    <option value="">Choose Exercise</option>
+    <option value="Walking">🚶 Walking</option>
+    <option value="Running">🏃 Running</option>
+    <option value="Cycling">🚴 Cycling</option>
+    <option value="Swimming">🏊 Swimming</option>
+    <option value="Gym Workout">💪 Gym Workout</option>
+    <option value="Yoga">🧘 Yoga</option>
+</select>
+        <input type="number"
+               id="duration"
+               placeholder="Duration (minutes)">
+
+        <input type="number"
+               id="calories"
+               placeholder="Calories Burned">
+
+        <button onclick="addActivity()"
+                class="add-btn">
+            Add Activity
+        </button>
+
+    </div>
+
+    <div class="summary">
+
+        <h2>Today's Summary</h2>
+
+        <p>Total Workouts:
+            <span id="workouts">0</span>
+        </p>
+
+        <p>Total Duration:
+            <span id="totalDuration">0</span> mins
+        </p>
+
+        <p>Total Calories:
+            <span id="totalCalories">0</span>
+        </p>
+
+    </div>
+
+    <div class="history">
+
+        <h2>Activity History</h2>
+
+        <ul id="activityList"></ul>
+
+    </div>
+    <button onclick="clearData()"
+        class="clear-btn">
+    Clear All Data
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
